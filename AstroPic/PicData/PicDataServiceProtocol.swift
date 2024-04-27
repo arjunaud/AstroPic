@@ -13,7 +13,7 @@ enum PicDataServiceError: Error {
     case invalidResponse
     case dataFetchError
     case decodingError
-    case InvalidInput
+    case invalidInput
 }
 
 protocol PicDataServiceProtocol {

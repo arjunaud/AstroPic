@@ -11,7 +11,7 @@ class PicDataService: PicDataServiceProtocol {
     private struct PicResponseItem : Decodable {
         
         enum CodingKeys: String, CodingKey {
-            case title, explanation, date, url, hdurl
+            case title, explanation, date, url, hdurl, thumbNailURL = "thumbnail_url", mediaType = "media_type"
         }
         
         let title: String?
@@ -19,14 +19,27 @@ class PicDataService: PicDataServiceProtocol {
         let date: Date?
         let url: URL?
         let hdurl: URL?
+        let mediaType: String?
         
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.title = try? container.decode(String.self, forKey: .title)
-            self.explanation = try? container.decode(String.self, forKey: .explanation)
-            self.date = try? container.decode(Date.self, forKey: .date)
-            self.url = URL(string: try container.decode(String.self, forKey: .url))
-            if let  urlString = try? container.decode(String.self, forKey: .hdurl) {
+            self.title = try? container.decodeIfPresent(String.self, forKey: .title)
+            self.explanation = try? container.decodeIfPresent(String.self, forKey: .explanation)
+            self.date = try? container.decodeIfPresent(Date.self, forKey: .date)
+            
+            self.mediaType = try? container.decodeIfPresent(String.self, forKey: .mediaType)
+            
+            if let urlString = try? container.decodeIfPresent(String.self, forKey: .thumbNailURL) {
+                self.url = URL(string: urlString)
+            } else if let urlString = try? container.decodeIfPresent(String.self, forKey: .url) {
+                self.url = URL(string: urlString)
+            } else {
+                self.url = nil
+            }
+            
+            if let urlString = try? container.decodeIfPresent(String.self, forKey: .hdurl) {
+                self.hdurl = URL(string: urlString)
+            } else if let urlString = try? container.decodeIfPresent(String.self, forKey: .url) {
                 self.hdurl = URL(string: urlString)
             } else {
                 self.hdurl = nil
@@ -61,14 +74,17 @@ class PicDataService: PicDataServiceProtocol {
 
         let endDateItem = URLQueryItem(name: "end_date", value: String(format: Self.dateFormater.string(from: endDate)))
         
+        let thumbsItem = URLQueryItem(name: "thumbs", value: "True")
+        
+        
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = EndPointConstants.host
         urlComponents.path = EndPointConstants.path
-        urlComponents.queryItems = [apiKey, startDateItem, endDateItem]
+        urlComponents.queryItems = [apiKey, startDateItem, endDateItem, thumbsItem]
         
         guard let url = urlComponents.url else {
-            completion(.failure(.InvalidInput))
+            completion(.failure(.invalidInput))
             return
         }
         
@@ -100,7 +116,7 @@ class PicDataService: PicDataServiceProtocol {
             do {
                 let picResponseItems: [PicResponseItem] = try decoder.decode([PicResponseItem].self, from: data)
                 let pics: [Pic] = picResponseItems.map {
-                    Pic(title: $0.title, explanation: $0.explanation, date: $0.date, url: $0.url, hdurl: $0.hdurl)
+                    Pic(title: $0.title, explanation: $0.explanation, date: $0.date, url: $0.url, hdurl: $0.hdurl, isVideoGeneratedPic: $0.mediaType == "video")
                 }
                 completion(.success(pics))
              }
