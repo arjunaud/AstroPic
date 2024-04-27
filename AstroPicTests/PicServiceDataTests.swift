@@ -128,7 +128,6 @@ final class PicServiceDataTests: XCTestCase {
     }
 
     func testSerivceReturnsErrorWhenAPICallReturnsError() throws {
-        let data = Data()
         let expectedError = NSError(domain: NSURLErrorDomain, code: NSURLErrorTimedOut, userInfo: nil)
         
         MockURLProtocol.error = expectedError
