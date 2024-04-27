@@ -16,6 +16,11 @@
 		C7E3BF812BDBBCB500AFDF1C /* AstroPicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BF802BDBBCB500AFDF1C /* AstroPicTests.swift */; };
 		C7E3BF8B2BDBBCB500AFDF1C /* AstroPicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BF8A2BDBBCB500AFDF1C /* AstroPicUITests.swift */; };
 		C7E3BF8D2BDBBCB500AFDF1C /* AstroPicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BF8C2BDBBCB500AFDF1C /* AstroPicUITestsLaunchTests.swift */; };
+		C7E3BF9C2BDBBD1900AFDF1C /* Pic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BF9B2BDBBD1900AFDF1C /* Pic.swift */; };
+		C7E3BF9E2BDBBE4600AFDF1C /* PicDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BF9D2BDBBE4600AFDF1C /* PicDataServiceProtocol.swift */; };
+		C7E3BFA02BDBBF0300AFDF1C /* PicDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BF9F2BDBBF0300AFDF1C /* PicDataService.swift */; };
+		C7E3BFAB2BDCB95A00AFDF1C /* PicServiceDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFAA2BDCB95A00AFDF1C /* PicServiceDataTests.swift */; };
+		C7E3BFAD2BDCB98900AFDF1C /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFAC2BDCB98900AFDF1C /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		C7E3BF862BDBBCB500AFDF1C /* AstroPicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroPicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E3BF8A2BDBBCB500AFDF1C /* AstroPicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicUITests.swift; sourceTree = "<group>"; };
 		C7E3BF8C2BDBBCB500AFDF1C /* AstroPicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C7E3BF9B2BDBBD1900AFDF1C /* Pic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pic.swift; sourceTree = "<group>"; };
+		C7E3BF9D2BDBBE4600AFDF1C /* PicDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicDataServiceProtocol.swift; sourceTree = "<group>"; };
+		C7E3BF9F2BDBBF0300AFDF1C /* PicDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicDataService.swift; sourceTree = "<group>"; };
+		C7E3BFAC2BDCB98900AFDF1C /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +108,7 @@
 		C7E3BF682BDBBCB300AFDF1C /* AstroPic */ = {
 			isa = PBXGroup;
 			children = (
+				C7E3BF9A2BDBBCFF00AFDF1C /* PicData */,
 				C7E3BF692BDBBCB300AFDF1C /* AppDelegate.swift */,
 				C7E3BF6B2BDBBCB300AFDF1C /* SceneDelegate.swift */,
 				C7E3BF6D2BDBBCB300AFDF1C /* ViewController.swift */,
@@ -114,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				C7E3BF802BDBBCB500AFDF1C /* AstroPicTests.swift */,
+				C7E3BFAA2BDCB95A00AFDF1C /* PicServiceDataTests.swift */,
+				C7E3BFAC2BDCB98900AFDF1C /* MockURLProtocol.swift */,
 			);
 			path = AstroPicTests;
 			sourceTree = "<group>";
@@ -125,6 +137,16 @@
 				C7E3BF8C2BDBBCB500AFDF1C /* AstroPicUITestsLaunchTests.swift */,
 			);
 			path = AstroPicUITests;
+			sourceTree = "<group>";
+		};
+		C7E3BF9A2BDBBCFF00AFDF1C /* PicData */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3BF9B2BDBBD1900AFDF1C /* Pic.swift */,
+				C7E3BF9D2BDBBE4600AFDF1C /* PicDataServiceProtocol.swift */,
+				C7E3BF9F2BDBBF0300AFDF1C /* PicDataService.swift */,
+			);
+			path = PicData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7E3BF6E2BDBBCB300AFDF1C /* ViewController.swift in Sources */,
+				C7E3BF9E2BDBBE4600AFDF1C /* PicDataServiceProtocol.swift in Sources */,
 				C7E3BF6A2BDBBCB300AFDF1C /* AppDelegate.swift in Sources */,
+				C7E3BF9C2BDBBD1900AFDF1C /* Pic.swift in Sources */,
+				C7E3BFA02BDBBF0300AFDF1C /* PicDataService.swift in Sources */,
 				C7E3BF6C2BDBBCB300AFDF1C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E3BFAD2BDCB98900AFDF1C /* MockURLProtocol.swift in Sources */,
+				C7E3BFAB2BDCB95A00AFDF1C /* PicServiceDataTests.swift in Sources */,
 				C7E3BF812BDBBCB500AFDF1C /* AstroPicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
