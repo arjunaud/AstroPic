@@ -117,7 +117,7 @@ final class PicServiceDataTests: XCTestCase {
                 XCTFail("Success is not expcted in this case = \(pics)")
             case .failure(let err):
                 guard case .serverError(400) = err else {
-                    XCTFail("Expected different error that expected = \(err)")
+                    XCTFail("Got different error than expected = \(err)")
                     return
                 }
                 expectation.fulfill()
@@ -140,7 +140,7 @@ final class PicServiceDataTests: XCTestCase {
                 XCTFail("Success is not expcted in this case = \(pics)")
             case .failure(let err):
                 guard case .networkError(let err) = err else {
-                    XCTFail("Expected different error that expected = \(err)")
+                    XCTFail("Got different error than expected = \(err)")
                     return
                 }
                 XCTAssertEqual((err as NSError).code, expectedError.code)
