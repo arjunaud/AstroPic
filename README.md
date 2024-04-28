@@ -19,6 +19,6 @@ Assumption
 * This app will run on iPhone and iPad for portrait orientation. If given additional time, landscape orientation can be supported.
 
 Decision
-* MVVM architecture with Router is used as it promotes a simple way to achieve modularity and testability.
+* MVVM architecture with Router is used as it provides a simple way to achieve modularity and testability.
 * UIKit is used for UI development as I am more confortable with it compared to SwiftUI and since the assignment is timebound. I am in the learning phase of SwiftUI.
 * Kingfisher library is used for image downoading, caching and showing activity indicator while downloading to save the time.
