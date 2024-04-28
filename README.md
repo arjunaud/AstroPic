@@ -16,9 +16,9 @@ This feature provides Astronomy Picture of the Day for the past 7 days with its 
 Assumption
 * Thumbnail images have been used for Video media_type
 * Seven days have been considered including current date. So it would display 7 pictures from the current date
-* This app will run on iPhone and iPad simulator for portrait orientation. If given additional time, landscape orientation can be supported.
+* This app will run on iPhone and iPad for portrait orientation. If given additional time, landscape orientation can be supported.
 
 Decision
 * MVVM architecture with Router is used as it promotes a simple way to achieve modularity and testability.
 * UIKit is used for UI development as I am more confortable with it. I am in learning phase of SwifUI.
-* Kingfisher is used for image downoading, caching and showing activity indicator while downloading to save the time.
+* Kingfisher library is used for image downoading, caching and showing activity indicator while downloading to save the time.
