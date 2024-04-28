@@ -12,6 +12,7 @@ protocol PicDetailViewModelDelegate: AnyObject {
     func reloadUI()
 }
 
+/// PicDetailViewModel use by Pic Detail View
 class PicDetailViewModel {
     private let pic: Pic
     private weak var delegate: PicDetailViewModelDelegate?

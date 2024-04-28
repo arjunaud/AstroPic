@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Class that impletents PicDataServiceProtocol which fetches Pic Models
 class PicDataService: PicDataServiceProtocol {
     private struct PicResponseItem : Decodable {
         enum CodingKeys: String, CodingKey {
@@ -61,6 +62,7 @@ class PicDataService: PicDataServiceProtocol {
     
     private static let dateFormater: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(identifier: "UTC")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()

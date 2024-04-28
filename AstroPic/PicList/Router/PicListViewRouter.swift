@@ -15,6 +15,8 @@ protocol PicListViewRouterProtocol: AnyObject {
     func showPicDetails(pic: Pic)
 }
 
+
+/// Class which provides the implementation of PicListViewRouterProtocol
 class PicListViewRouter: Router {
     
     private weak var window: UIWindow?
