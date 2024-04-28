@@ -47,7 +47,7 @@ class PicDataService: PicDataServiceProtocol {
     }
 
     
-    let urlSession: URLSession
+    private let urlSession: URLSession
     
     init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
