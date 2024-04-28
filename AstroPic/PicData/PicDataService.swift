@@ -9,7 +9,6 @@ import Foundation
 
 class PicDataService: PicDataServiceProtocol {
     private struct PicResponseItem : Decodable {
-        
         enum CodingKeys: String, CodingKey {
             case title, explanation, date, url, hdurl, thumbNailURL = "thumbnail_url", mediaType = "media_type"
         }
@@ -88,7 +87,7 @@ class PicDataService: PicDataServiceProtocol {
             return
         }
         
-        let request = URLRequest(url: url)
+        let request = URLRequest(url: url, timeoutInterval: 30)
         
         let dataTask = self.urlSession.dataTask(with: request, completionHandler: { (data, response, responseError) -> Void in
             guard responseError == nil else {

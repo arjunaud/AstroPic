@@ -41,6 +41,7 @@ final class PicServiceDataTests: XCTestCase {
     }
 
     func testSerivceReturnsPicsWhenAPICallIsSuccess() throws {
+        //Given
         let response =
             """
               [
@@ -80,6 +81,7 @@ final class PicServiceDataTests: XCTestCase {
         
         let expectation = expectation(description: "It should recieve Pics")
                 
+        //When
         self.service.fetchPics(startDate: self.startDate, endDate: self.endDate) { result in
             switch result {
             case .success(let pics):
@@ -94,6 +96,7 @@ final class PicServiceDataTests: XCTestCase {
             }
         }
         
+        //Then
         wait(for: [expectation], timeout: Self.expectationTimeout)
     }
     
