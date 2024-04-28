@@ -44,8 +44,7 @@ final class PicListViewModelTests: XCTestCase {
             [weak self] (startDate, endDate, completion) in
             guard let self = self else { return }
             let numberOfDays = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day!
-            //TODO: Change to 6
-            XCTAssertEqual(numberOfDays, 7)
+            XCTAssertEqual(numberOfDays, 6)
 
             XCTAssertTrue(self.viewModelDelegate.showingLoadingIndicator)
             completion(.success(pics))
