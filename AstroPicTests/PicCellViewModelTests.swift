@@ -46,7 +46,7 @@ final class PicCellViewModelTests: XCTestCase {
         self.viewModel = PicCellViewModel(pic: expectedPic, router: self.router)
         
         let routerExpectation = expectation(description: "routerExpectation")
-        self.router.mockShowPicDetailsBlock = { [weak self] pic in
+        self.router.mockShowPicDetailsBlock = { pic in
             XCTAssertEqual(pic, expectedPic)
             routerExpectation.fulfill()
         }
