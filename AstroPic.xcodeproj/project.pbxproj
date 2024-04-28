@@ -26,10 +26,16 @@
 		C7E3BFAD2BDCB98900AFDF1C /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFAC2BDCB98900AFDF1C /* MockURLProtocol.swift */; };
 		C7E3BFAF2BDD2ABE00AFDF1C /* PicListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFAE2BDD2ABE00AFDF1C /* PicListViewCell.swift */; };
 		C7E3BFB22BDD50D500AFDF1C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C7E3BFB12BDD50D500AFDF1C /* Kingfisher */; };
+		C7E3BFB62BDD68D500AFDF1C /* PicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFB52BDD68D500AFDF1C /* PicDetailViewController.swift */; };
+		C7E3BFB82BDD68EB00AFDF1C /* PicDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFB72BDD68EB00AFDF1C /* PicDetailRouter.swift */; };
+		C7E3BFBA2BDD68FB00AFDF1C /* PicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFB92BDD68FB00AFDF1C /* PicDetailViewModel.swift */; };
+		C7E3BFBC2BDE1A2300AFDF1C /* PicListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFBB2BDE1A2300AFDF1C /* PicListViewModelTests.swift */; };
 		C7E3BFBE2BDE1A6D00AFDF1C /* MockPicDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFBD2BDE1A6D00AFDF1C /* MockPicDataService.swift */; };
 		C7E3BFC02BDE1A8400AFDF1C /* MockPicListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFBF2BDE1A8400AFDF1C /* MockPicListViewModelDelegate.swift */; };
 		C7E3BFC22BDE238900AFDF1C /* MockPicListViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFC12BDE238900AFDF1C /* MockPicListViewRouter.swift */; };
 		C7E3BFC62BDE620400AFDF1C /* PicCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFC52BDE620400AFDF1C /* PicCellViewModelTests.swift */; };
+		C7E3BFC82BDE681000AFDF1C /* PicDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFC72BDE681000AFDF1C /* PicDetailViewModelTests.swift */; };
+		C7E3BFD02BDE697700AFDF1C /* MockPicDetailVewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3BFCF2BDE697700AFDF1C /* MockPicDetailVewModelDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,11 +78,16 @@
 		C7E3BFAA2BDCB95A00AFDF1C /* PicServiceDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicServiceDataTests.swift; sourceTree = "<group>"; };
 		C7E3BFAC2BDCB98900AFDF1C /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		C7E3BFAE2BDD2ABE00AFDF1C /* PicListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicListViewCell.swift; sourceTree = "<group>"; };
+		C7E3BFB52BDD68D500AFDF1C /* PicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicDetailViewController.swift; sourceTree = "<group>"; };
+		C7E3BFB72BDD68EB00AFDF1C /* PicDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicDetailRouter.swift; sourceTree = "<group>"; };
+		C7E3BFB92BDD68FB00AFDF1C /* PicDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicDetailViewModel.swift; sourceTree = "<group>"; };
 		C7E3BFBB2BDE1A2300AFDF1C /* PicListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicListViewModelTests.swift; sourceTree = "<group>"; };
 		C7E3BFBD2BDE1A6D00AFDF1C /* MockPicDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPicDataService.swift; sourceTree = "<group>"; };
 		C7E3BFBF2BDE1A8400AFDF1C /* MockPicListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPicListViewModelDelegate.swift; sourceTree = "<group>"; };
 		C7E3BFC12BDE238900AFDF1C /* MockPicListViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPicListViewRouter.swift; sourceTree = "<group>"; };
 		C7E3BFC52BDE620400AFDF1C /* PicCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCellViewModelTests.swift; sourceTree = "<group>"; };
+		C7E3BFC72BDE681000AFDF1C /* PicDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicDetailViewModelTests.swift; sourceTree = "<group>"; };
+		C7E3BFCF2BDE697700AFDF1C /* MockPicDetailVewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPicDetailVewModelDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E3BF992BDBBCDF00AFDF1C /* PicList */,
+				C7E3BFB42BDD687D00AFDF1C /* PicDetail */,
 				C7E3BFA72BDBE55100AFDF1C /* Common */,
 				C7E3BF9A2BDBBCFF00AFDF1C /* PicData */,
 				C7E3BF692BDBBCB300AFDF1C /* AppDelegate.swift */,
@@ -147,6 +159,7 @@
 				C7E3BFAA2BDCB95A00AFDF1C /* PicServiceDataTests.swift */,
 				C7E3BFBB2BDE1A2300AFDF1C /* PicListViewModelTests.swift */,
 				C7E3BFC52BDE620400AFDF1C /* PicCellViewModelTests.swift */,
+				C7E3BFC72BDE681000AFDF1C /* PicDetailViewModelTests.swift */,
 				C7E3BFC92BDE688200AFDF1C /* Mocks */,
 			);
 			path = AstroPicTests;
@@ -198,6 +211,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C7E3BFB42BDD687D00AFDF1C /* PicDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3BFCB2BDE68E800AFDF1C /* View */,
+				C7E3BFCC2BDE68F100AFDF1C /* Router */,
+				C7E3BFCD2BDE690000AFDF1C /* View Model */,
+			);
+			path = PicDetail;
+			sourceTree = "<group>";
+		};
 		C7E3BFC92BDE688200AFDF1C /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +228,7 @@
 				C7E3BFBF2BDE1A8400AFDF1C /* MockPicListViewModelDelegate.swift */,
 				C7E3BFAC2BDCB98900AFDF1C /* MockURLProtocol.swift */,
 				C7E3BFBD2BDE1A6D00AFDF1C /* MockPicDataService.swift */,
+				C7E3BFCF2BDE697700AFDF1C /* MockPicDetailVewModelDelegate.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -214,6 +238,30 @@
 			children = (
 				C7E3BFA82BDBE74A00AFDF1C /* PicCellViewModel.swift */,
 				C7E3BFA12BDBE3B700AFDF1C /* PicListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C7E3BFCB2BDE68E800AFDF1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3BFB52BDD68D500AFDF1C /* PicDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7E3BFCC2BDE68F100AFDF1C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3BFB72BDD68EB00AFDF1C /* PicDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C7E3BFCD2BDE690000AFDF1C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3BFB92BDD68FB00AFDF1C /* PicDetailViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -363,16 +411,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E3BFBA2BDD68FB00AFDF1C /* PicDetailViewModel.swift in Sources */,
 				C7E3BFA62BDBE54C00AFDF1C /* RouterProtocol.swift in Sources */,
 				C7E3BF9E2BDBBE4600AFDF1C /* PicDataServiceProtocol.swift in Sources */,
 				C7E3BF6E2BDBBCB300AFDF1C /* PicListViewController.swift in Sources */,
 				C7E3BF6A2BDBBCB300AFDF1C /* AppDelegate.swift in Sources */,
 				C7E3BF9C2BDBBD1900AFDF1C /* Pic.swift in Sources */,
+				C7E3BFB82BDD68EB00AFDF1C /* PicDetailRouter.swift in Sources */,
 				C7E3BFA92BDBE74A00AFDF1C /* PicCellViewModel.swift in Sources */,
 				C7E3BFA42BDBE47800AFDF1C /* PicListViewRouter.swift in Sources */,
 				C7E3BFA02BDBBF0300AFDF1C /* PicDataService.swift in Sources */,
 				C7E3BF6C2BDBBCB300AFDF1C /* SceneDelegate.swift in Sources */,
 				C7E3BFAF2BDD2ABE00AFDF1C /* PicListViewCell.swift in Sources */,
+				C7E3BFB62BDD68D500AFDF1C /* PicDetailViewController.swift in Sources */,
 				C7E3BFA22BDBE3B700AFDF1C /* PicListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +438,7 @@
 				C7E3BFC22BDE238900AFDF1C /* MockPicListViewRouter.swift in Sources */,
 				C7E3BFBC2BDE1A2300AFDF1C /* PicListViewModelTests.swift in Sources */,
 				C7E3BFAB2BDCB95A00AFDF1C /* PicServiceDataTests.swift in Sources */,
+				C7E3BFC82BDE681000AFDF1C /* PicDetailViewModelTests.swift in Sources */,
 				C7E3BFD02BDE697700AFDF1C /* MockPicDetailVewModelDelegate.swift in Sources */,
 				C7E3BFC02BDE1A8400AFDF1C /* MockPicListViewModelDelegate.swift in Sources */,
 			);

@@ -106,6 +106,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-211" y="24"/>
+        </scene>
+        <!--Pic Detail View Controller-->
+        <scene sceneID="bKg-dP-5KS">
+            <objects>
+                <viewController storyboardIdentifier="PicDetailViewController" id="wOK-oX-XzU" customClass="PicDetailViewController" customModule="AstroPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEb-SG-ida">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZpW-Lc-xkF">
+                                <rect key="frame" x="20" y="80" width="390" height="548"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q5y-hf-8cg">
+                                <rect key="frame" x="20" y="648" width="390" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="nXr-3n-hbh"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I37-xE-ULG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZpW-Lc-xkF" firstAttribute="top" secondItem="I37-xE-ULG" secondAttribute="top" constant="21" id="2mg-wK-UdL"/>
+                            <constraint firstItem="Q5y-hf-8cg" firstAttribute="bottom" secondItem="I37-xE-ULG" secondAttribute="bottom" id="9fB-Ju-ewk"/>
+                            <constraint firstItem="Q5y-hf-8cg" firstAttribute="leading" secondItem="I37-xE-ULG" secondAttribute="leading" constant="20" id="9qM-JT-RZC"/>
+                            <constraint firstItem="I37-xE-ULG" firstAttribute="trailing" secondItem="Q5y-hf-8cg" secondAttribute="trailing" constant="20" id="EhE-vW-dIm"/>
+                            <constraint firstItem="Q5y-hf-8cg" firstAttribute="top" secondItem="ZpW-Lc-xkF" secondAttribute="bottom" constant="20" id="X0m-hk-nWU"/>
+                            <constraint firstItem="ZpW-Lc-xkF" firstAttribute="leading" secondItem="I37-xE-ULG" secondAttribute="leading" constant="20" id="dSA-Kc-ODM"/>
+                            <constraint firstItem="I37-xE-ULG" firstAttribute="trailing" secondItem="ZpW-Lc-xkF" secondAttribute="trailing" constant="20" id="wkk-4h-MKK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="explanationView" destination="Q5y-hf-8cg" id="Aah-4G-Fem"/>
+                        <outlet property="imageView" destination="ZpW-Lc-xkF" id="5sn-jU-HUm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwV-ie-2L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.02325581395348" y="38.626609442060087"/>
         </scene>
     </scenes>
     <resources>
