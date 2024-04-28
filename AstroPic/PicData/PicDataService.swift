@@ -115,7 +115,7 @@ class PicDataService: PicDataServiceProtocol {
             do {
                 let picResponseItems: [PicResponseItem] = try decoder.decode([PicResponseItem].self, from: data)
                 let pics: [Pic] = picResponseItems.map {
-                    Pic(title: $0.title, explanation: $0.explanation, date: $0.date, url: $0.url, hdurl: $0.hdurl, isVideoGeneratedPic: $0.mediaType == "video")
+                    Pic(title: $0.title, explanation: $0.explanation, date: $0.date, url: $0.url, hdurl: $0.hdurl, isVideo: $0.mediaType == "video")
                 }
                 completion(.success(pics))
              }
