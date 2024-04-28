@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// View model for the cell displayed in pic list
 class PicCellViewModel {
     private let pic: Pic
     private weak var router: PicListViewRouterProtocol?
@@ -32,6 +33,7 @@ class PicCellViewModel {
     let date: String
     let url: URL?
     
+    /// Handles tap on pic cell and shows pic details
     func picTapped() {
         guard let router = self.router else { return }
         router.showPicDetails(pic: self.pic)

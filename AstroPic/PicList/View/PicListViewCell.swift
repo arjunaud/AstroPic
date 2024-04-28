@@ -8,10 +8,11 @@
 import UIKit
 import Kingfisher
 
+
+/// Class for represnting each Picture cell in Picture List
 class PicListViewCell: UITableViewCell {
-    @IBOutlet weak var infoLabel: UILabel!
-    
-    @IBOutlet weak var picImageView: UIImageView!
+    @IBOutlet private weak var infoLabel: UILabel!
+    @IBOutlet private weak var picImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,13 +20,9 @@ class PicListViewCell: UITableViewCell {
         self.selectionStyle = .none
         self.picImageView.heightAnchor.constraint(equalTo: self.picImageView.widthAnchor, multiplier: 3.0/4.0).isActive = true
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    /// Configures the cell using PicCellViewModel
+    /// - Parameter viewModel: PicCellViewModel which provides data for the view
     func configure(viewModel: PicCellViewModel) {
         var date = AttributedString(viewModel.date)
         date.font = .footnote

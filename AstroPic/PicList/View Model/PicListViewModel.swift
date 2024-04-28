@@ -7,10 +7,19 @@
 
 import Foundation
 
+/// Protocol to be implemented by the view using PicListViewModel
 protocol PicListViewModelDelegateProtocol: AnyObject {
+    
+    /// Tell the the view to show loading indicator
     func showLoadingIndicator()
+    
+    /// Tells the view to stop loading indicator
     func stopLoadingIndicator()
+    
+    /// Tells the view to reload the Pic List
     func reloadList()
+    
+    // Tells the view to display error message
     func showErrorMessage(title:String, message: String)
 }
 
@@ -47,18 +56,25 @@ class PicListViewModel {
         }
     }
     
+    /// Returns number of pictures
     var picCount: Int {
         return self.picCellViewModels.count
     }
     
+    /// Returns PicCellViewModel for each row of Pcicture List View
+    /// - Parameter row: Row Index
+    /// - Returns: PicCellViewModel for each row of Pcicture List View
     func picCellModelForRow(row: Int) -> PicCellViewModel {
         return self.picCellViewModels[row]
     }
 
+    
+    /// Handles refresh button on the List screen. Just initiates the fetchnig of Pics
     func refresh() {
         self.fetchPics()
     }
     
+    /// Handles viewDidLoad event of Pic List Screen
     func viewDidLoad() {
         self.refresh()
     }
