@@ -15,7 +15,7 @@ final class PicServiceDataTests: XCTestCase {
     
     private static let dateFormater: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(identifier: "UTC")
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
