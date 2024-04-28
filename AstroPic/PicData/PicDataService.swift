@@ -67,13 +67,12 @@ class PicDataService: PicDataServiceProtocol {
         return formatter
     }()
         
-    func fetchPics(startDate: Date, endDate: Date, completion: @escaping (Result<[Pic], PicDataServiceError>) -> Void) {
+    func fetchPics(startDate: Date, endDate: Date?, completion: @escaping (Result<[Pic], PicDataServiceError>) -> Void) {
     
         let apiKey = URLQueryItem(name: "api_key" , value: EndPointConstants.apiKey)
         
         let startDateItem = URLQueryItem(name: "start_date", value: String(format: Self.dateFormater.string(from: startDate)))
 
-        let endDateItem = URLQueryItem(name: "end_date", value: String(format: Self.dateFormater.string(from: endDate)))
         
         let thumbsItem = URLQueryItem(name: "thumbs", value: "True")
         
@@ -82,7 +81,13 @@ class PicDataService: PicDataServiceProtocol {
         urlComponents.scheme = "https"
         urlComponents.host = EndPointConstants.host
         urlComponents.path = EndPointConstants.path
-        urlComponents.queryItems = [apiKey, startDateItem, endDateItem, thumbsItem]
+
+        if let endDate = endDate{
+            let endDateItem = URLQueryItem(name: "end_date", value: String(format: Self.dateFormater.string(from: endDate)))
+            urlComponents.queryItems = [apiKey, startDateItem, endDateItem, thumbsItem]
+        } else {
+            urlComponents.queryItems = [apiKey, startDateItem, thumbsItem]
+        }
         
         guard let url = urlComponents.url else {
             completion(.failure(.invalidInput))

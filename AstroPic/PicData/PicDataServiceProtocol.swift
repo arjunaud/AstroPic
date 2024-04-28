@@ -25,5 +25,5 @@ protocol PicDataServiceProtocol {
     ///   - startDate: starting date from which the Picture is to be fetched
     ///   - endDate: end date till which  the Picture is to be fetched
     ///   - completion: Completion have array of pics or the error if it fails
-    func fetchPics(startDate: Date, endDate: Date, completion: @escaping (Result<[Pic], PicDataServiceError>) -> Void)
+    func fetchPics(startDate: Date, endDate: Date?, completion: @escaping (Result<[Pic], PicDataServiceError>) -> Void)
 }

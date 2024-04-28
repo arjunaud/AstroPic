@@ -88,7 +88,7 @@ class PicListViewModel {
             return
         }
         
-        self.service.fetchPics(startDate: startDate, endDate: endDate) { [weak self] (result) in
+        self.service.fetchPics(startDate: startDate, endDate: nil) { [weak self] (result) in
             DispatchQueue.main.async {
                 guard let self = self else { return }
                 self.isLoadingServiceData = false

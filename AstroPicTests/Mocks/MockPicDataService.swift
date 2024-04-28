@@ -10,12 +10,12 @@ import Foundation
 
 class MockPicDataService: PicDataServiceProtocol {
     
-    typealias MockFetchPicsBlock =  (Date, Date, (Result<[Pic], PicDataServiceError>) -> Void) -> Void
+    typealias MockFetchPicsBlock =  (Date, Date?, (Result<[Pic], PicDataServiceError>) -> Void) -> Void
 
     var mockFetchPicsBlock: MockFetchPicsBlock?
 
     
-    func fetchPics(startDate: Date, endDate: Date, completion: @escaping (Result<[Pic], PicDataServiceError>) -> Void) {
+    func fetchPics(startDate: Date, endDate: Date?, completion: @escaping (Result<[Pic], PicDataServiceError>) -> Void) {
         self.mockFetchPicsBlock?(startDate, endDate, completion)
     }
 
