@@ -21,3 +21,4 @@ Assumption
 Decision
 * MVVM architecture with Router is used as it promotes a simple way to achieve modularity and testability.
 * UIKit is used for UI development as I am more confortable with it. I am in learning phase of SwifUI.
+* Kingfisher is used for image downoading, caching and showing activity indicator while downloading to save the time.
