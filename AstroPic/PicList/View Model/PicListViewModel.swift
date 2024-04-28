@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Protocol to be implemented by the view using PicListViewModel
+/// Protocol to be implemented by the view  using PicListViewModel
 protocol PicListViewModelDelegateProtocol: AnyObject {
     
     /// Tell the the view to show loading indicator
