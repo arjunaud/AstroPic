@@ -14,7 +14,8 @@ class PicDetailViewController: UIViewController {
 
     @IBOutlet weak var explanationView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var imageScrollView: UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,5 +40,11 @@ extension PicDetailViewController: PicDetailViewModelDelegate {
         self.imageView.kf.indicatorType = .activity
         self.imageView.kf.setImage(with: self.viewModel.picURL)
         self.explanationView.text = self.viewModel.picExplanation
+    }
+}
+
+extension PicDetailViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.imageView
     }
 }
