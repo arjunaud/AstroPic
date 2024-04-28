@@ -21,7 +21,7 @@ class PicListViewModel {
     private let router: PicListViewRouterProtocol
     private let service: PicDataServiceProtocol
     
-    private static let daysToFetch = 7
+    private static let daysToFetch = 6
 
     private var isLoadingServiceData = false {
         didSet {
