@@ -24,14 +24,7 @@ class PicListViewCell: UITableViewCell {
     /// Configures the cell using PicCellViewModel
     /// - Parameter viewModel: PicCellViewModel which provides data for the view
     func configure(viewModel: PicCellViewModel) {
-        var date = AttributedString(viewModel.date)
-        date.font = .footnote
-        date.foregroundColor = .gray
-        
-        var title = AttributedString(viewModel.title)
-        title.font = .title
-        title.foregroundColor = .red
-        self.infoLabel.attributedText = NSAttributedString(date + " : " + title)
+        self.infoLabel.text = viewModel.date + " : " + viewModel.title
         self.picImageView.kf.indicatorType = .activity
         self.picImageView.kf.setImage(with: viewModel.url)
     }
