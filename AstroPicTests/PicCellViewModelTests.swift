@@ -20,7 +20,7 @@ final class PicCellViewModelTests: XCTestCase {
     }
 
     func testPicCellModeReturnsNoneForMissingTitle() throws {
-        let pic = Pic(title: nil, explanation: nil, date: Date(), url: nil, hdurl: nil, isVideoGeneratedPic: false)
+        let pic = Pic(title: nil, explanation: nil, date: Date(), url: nil, hdurl: nil, isVideo: false)
         self.viewModel = PicCellViewModel(pic: pic, router: self.router)
         XCTAssertEqual(self.viewModel.title, "None")
         
@@ -33,7 +33,7 @@ final class PicCellViewModelTests: XCTestCase {
         dateComponent.month = 4
         let date = Calendar.current.date(from: dateComponent)
 
-        let pic = Pic(title: "title", explanation: "explanation", date: date, url: URL(string: "https://host.com/pic-url")!, hdurl: URL(string: "https://host.com/pic-hdurl")!, isVideoGeneratedPic: false)
+        let pic = Pic(title: "title", explanation: "explanation", date: date, url: URL(string: "https://host.com/pic-url")!, hdurl: URL(string: "https://host.com/pic-hdurl")!, isVideo: false)
         self.viewModel = PicCellViewModel(pic: pic, router: self.router)
         XCTAssertEqual(self.viewModel.title, pic.title)
         XCTAssertEqual(self.viewModel.date, "2024-04-01")
@@ -42,7 +42,7 @@ final class PicCellViewModelTests: XCTestCase {
     
     func testPicCellModelCallsRouterMethodOnTapped() throws {
         //Given
-        let expectedPic = Pic(title: nil, explanation: nil, date: Date(), url: nil, hdurl: nil, isVideoGeneratedPic: false)
+        let expectedPic = Pic(title: nil, explanation: nil, date: Date(), url: nil, hdurl: nil, isVideo: false)
         self.viewModel = PicCellViewModel(pic: expectedPic, router: self.router)
         
         let routerExpectation = expectation(description: "routerExpectation")

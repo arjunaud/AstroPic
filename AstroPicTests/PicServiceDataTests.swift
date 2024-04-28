@@ -86,8 +86,8 @@ final class PicServiceDataTests: XCTestCase {
             switch result {
             case .success(let pics):
                 let expectedPics = [
-                    Pic(title: "Pic1 title", explanation: "Pic1 explanatation", date: self.startDate, url: URL(string: "https://host.com/pic1-url"), hdurl: URL(string: "https://host.com/pic1-hdurl"), isVideoGeneratedPic: false),
-                    Pic(title: "Pic2 title", explanation: "Pic2 explanatation", date: self.endDate, url: URL(string: "https://host.com/pic2-thumb-url"), hdurl: URL(string: "https://host.com/vid2-url"), isVideoGeneratedPic: true)
+                    Pic(title: "Pic1 title", explanation: "Pic1 explanatation", date: self.startDate, url: URL(string: "https://host.com/pic1-url"), hdurl: URL(string: "https://host.com/pic1-hdurl"), isVideo: false),
+                    Pic(title: "Pic2 title", explanation: "Pic2 explanatation", date: self.endDate, url: URL(string: "https://host.com/pic2-thumb-url"), hdurl: URL(string: "https://host.com/vid2-url"), isVideo: true)
                 ]
                 XCTAssertEqual(pics, expectedPics)
                 expectation.fulfill()

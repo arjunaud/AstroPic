@@ -13,5 +13,5 @@ struct Pic: Equatable {
     let date: Date?
     let url: URL?
     let hdurl: URL?
-    let isVideoGeneratedPic: Bool
+    let isVideo: Bool
 }
