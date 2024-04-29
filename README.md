@@ -18,6 +18,7 @@ Assumption
 * Seven days have been considered including current date. So it would display 7 pictures from the current date
 * This app will run on iPhone and iPad for portrait orientation. If given additional time, landscape orientation can be supported.
 * apod-api timezone is assumed to UTC for sending start_date since API doc does not specify time zone and UTC is the standard. end_date is not sent for safety against API timezone mismatch . By default it takes today date as per the doc.
+* Dates in the Picture list screen are displayed in the server timezone as there is no time and zone info associated with it.
 
 Decision
 * MVVM architecture with Router is used as it provides a simple way to achieve modularity and testability.
