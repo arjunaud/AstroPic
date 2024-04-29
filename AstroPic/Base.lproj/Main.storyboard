@@ -54,7 +54,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="tol-8F-luE" secondAttribute="bottom" constant="1" id="6HY-5m-fsr"/>
                                                 <constraint firstAttribute="trailing" secondItem="tol-8F-luE" secondAttribute="trailing" id="BPQ-Nl-ha2"/>
                                                 <constraint firstItem="aWr-dB-3cW" firstAttribute="trailing" secondItem="aFU-I8-HtU" secondAttribute="trailing" constant="-8" id="FMj-0m-zQW"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TP4-2v-XeQ" secondAttribute="trailing" constant="8" id="Qgf-vg-2j5"/>
+                                                <constraint firstAttribute="trailing" secondItem="TP4-2v-XeQ" secondAttribute="trailing" constant="8" id="Qgf-vg-2j5"/>
                                                 <constraint firstItem="TP4-2v-XeQ" firstAttribute="top" secondItem="aWr-dB-3cW" secondAttribute="bottom" constant="16" id="b6h-jw-3Qh"/>
                                                 <constraint firstAttribute="bottom" secondItem="TP4-2v-XeQ" secondAttribute="bottom" constant="13" id="byZ-zn-LcW"/>
                                                 <constraint firstItem="TP4-2v-XeQ" firstAttribute="leading" secondItem="aFU-I8-HtU" secondAttribute="leading" constant="8" id="fmb-sb-QDq"/>
