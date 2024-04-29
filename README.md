@@ -15,7 +15,7 @@ This feature provides Astronomy Picture of the Day for the past 7 days with its 
 
 Assumption
 * Thumbnail images have been used for Video media_type
-* 7 days have been considered including current date. So it would display the images as per the image availabilty in the server.
+* 7 days have been considered including current date. So it would display the images as per the image availabilty on the server.
 * This app will run on iPhone and iPad for portrait orientation. If given additional time, landscape orientation can be supported.
 * apod-api timezone is assumed to UTC for sending start_date since API doc does not specify time zone and UTC is the standard. end_date is not sent for safety against API timezone mismatch . By default it takes today date as per the doc.
 * Dates in the Picture list screen are displayed in the server timezone as there is no time and zone info associated with it.
